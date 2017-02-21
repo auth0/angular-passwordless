@@ -17,15 +17,13 @@
       }
       this.clientID = config.clientID;
       this.domain = config.domain;
-      this.options = config.options || {};
     };
 
     this.$get = ["$rootScope", function($rootScope) {
 
       var LockPasswordless = new Auth0LockPasswordless(
         this.clientID,
-        this.domain,
-        this.options
+        this.domain
       );
       var lockPasswordless = {};
       var functions = [];
